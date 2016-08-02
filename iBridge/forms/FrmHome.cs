@@ -20,18 +20,15 @@ namespace iBridge
 
         private void mnuAddUser_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var f = new FrmUsers();
-            f.MdiParent = this;
+            var f = new FrmUsers {MdiParent = this};
             f.Show();
         }
 
         private void FrmHome_Load(object sender, EventArgs e)
         {
-            XtraTabbedMdiManager mdiManager = new XtraTabbedMdiManager();
-            mdiManager.MdiParent = this;
-            txtStatusTime.Caption = DateTime.Now.ToString("dd/MM/yyyy");
+            XtraTabbedMdiManager mdiManager = new XtraTabbedMdiManager {MdiParent = this};
+            txtStatusTime.Caption = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             txtStatusBar.Caption = Globals.GUserName;
-            
         }
 
 
@@ -44,30 +41,35 @@ namespace iBridge
 
         private void mnuResetPwd_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var f = new FrmChangePwd();
-            f.MdiParent = this;
+            var f = new FrmChangePwd {MdiParent = this};
             f.Show();
         }
 
         private void btnResetPwd_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var f = new FrmResetPwd();
-            f.MdiParent = this;
+            var f = new FrmResetPwd {MdiParent = this};
             f.Show();
         }
 
         private void mnuSysParam_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var f = new FrmConnection();
-            f.MdiParent = this;
+            var f = new FrmConnection {MdiParent = this};
             f.Show();
 
         }
 
         private void btnMain_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var f = new FrmWeight();
-            f.MdiParent = this;
+            Boolean found = false;
+            foreach (
+                        Form openForm in Application.OpenForms.Cast<Form>().Where(openForm => openForm.GetType() == typeof(FrmWeight))
+                    )
+            {
+                found = true;
+            }
+
+            if (found) return;
+            FrmWeight f = new FrmWeight {MdiParent = this};
             f.Show();
         }
     }
