@@ -7,6 +7,7 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using MySql.Data.MySqlClient;
 
 namespace iBridge
 {
@@ -84,12 +85,43 @@ namespace iBridge
 
         }
 
+        private void LoadVehicles()
+        {
+            BindingSource bdsVehicles = new BindingSource();
+
+            try
+            {
+                using (MySqlConnection cn = new MySqlConnection(Globals.ConnectionString))
+                {
+                    MySqlDataAdapter da = new MySqlDataAdapter("select VehicleNo from vehicles order by vehicleno", cn);
+                    cn.Open();
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    bdsVehicles.DataSource = ds.Tables[0];
+                    //bdsVehicles.DataMember = "Table";
+
+                    txtVehicleNo.DataBindings.Add("EditValue", bdsVehicles, "VehicleNo");
+                    txtVehicleNo.Properties.DataSource = bdsVehicles;
+                    txtVehicleNo.Properties.DisplayMember = "VehicleNo";
+                    txtVehicleNo.Properties.ValueMember = "VehicleNo";
+                    txtVehicleNo.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+                    txtVehicleNo.Properties.AutoSearchColumnIndex = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void FrmWeight_Load(object sender, EventArgs e)
         {
             btnDouble.Checked = true;
             btnLoaded.Checked = true;
             btnScale1.Checked = true;
-        }
+
+            LoadVehicles();}
 
         private void btnSingle_CheckedChanged(object sender, EventArgs e)
         {

@@ -95,8 +95,8 @@
             this.btnEmpty = new DevExpress.XtraEditors.CheckButton();
             this.btnLoaded = new DevExpress.XtraEditors.CheckButton();
             this.pnlWeight = new DevExpress.XtraEditors.PanelControl();
-            this.lblWeight = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblWeight = new DevExpress.XtraEditors.LabelControl();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -855,6 +855,16 @@
             this.pnlWeight.Size = new System.Drawing.Size(306, 58);
             this.pnlWeight.TabIndex = 19;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Digital-7 Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Lime;
+            this.labelControl1.Location = new System.Drawing.Point(277, 26);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(20, 22);
+            this.labelControl1.TabIndex = 60;
+            this.labelControl1.Text = "kg";
+            // 
             // lblWeight
             // 
             this.lblWeight.Appearance.Font = new System.Drawing.Font("Digital-7 Mono", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -865,16 +875,6 @@
             this.lblWeight.Size = new System.Drawing.Size(174, 64);
             this.lblWeight.TabIndex = 0;
             this.lblWeight.Text = "999999";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Digital-7 Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Lime;
-            this.labelControl1.Location = new System.Drawing.Point(277, 26);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(20, 22);
-            this.labelControl1.TabIndex = 60;
-            this.labelControl1.Text = "kg";
             // 
             // FrmWeight
             // 
