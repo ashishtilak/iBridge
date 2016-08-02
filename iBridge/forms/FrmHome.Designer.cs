@@ -176,7 +176,7 @@
             // 
             // btnMain
             // 
-            this.btnMain.Caption = "Weigh Bridge";
+            this.btnMain.Caption = "Weighment";
             this.btnMain.Glyph = ((System.Drawing.Image)(resources.GetObject("btnMain.Glyph")));
             this.btnMain.Id = 2;
             this.btnMain.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnMain.LargeGlyph")));

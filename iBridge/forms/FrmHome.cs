@@ -66,7 +66,8 @@ namespace iBridge
 
         private void btnMain_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var f = new FrmWeight();f.MdiParent = this;
+            var f = new FrmWeight();
+            f.MdiParent = this;
             f.Show();
         }
     }
