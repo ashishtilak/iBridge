@@ -93,7 +93,7 @@ namespace iBridge
             {
                 using (MySqlConnection cn = new MySqlConnection(Globals.ConnectionString))
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter("select VehicleNo from vehicles order by vehicleno", cn);
+                    MySqlDataAdapter da = new MySqlDataAdapter("select VehicleID, VehicleNo from vehicles order by vehicleno", cn);
                     cn.Open();
                     DataSet ds = new DataSet();
                     da.Fill(ds);
@@ -101,12 +101,12 @@ namespace iBridge
                     bdsVehicles.DataSource = ds.Tables[0];
                     //bdsVehicles.DataMember = "Table";
 
-                    txtVehicleNo.DataBindings.Add("EditValue", bdsVehicles, "VehicleNo");
+                    txtVehicleNo.DataBindings.Add("EditValue", bdsVehicles, "VehicleID");
                     txtVehicleNo.Properties.DataSource = bdsVehicles;
                     txtVehicleNo.Properties.DisplayMember = "VehicleNo";
-                    txtVehicleNo.Properties.ValueMember = "VehicleNo";
+                    txtVehicleNo.Properties.ValueMember = "VehicleID";
                     txtVehicleNo.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-                    txtVehicleNo.Properties.AutoSearchColumnIndex = 1;
+                    txtVehicleNo.Properties.AutoSearchColumnIndex = 2;
                 }
             }
             catch (Exception ex)

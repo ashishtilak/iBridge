@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Xml;
+using System.Data;
 
 namespace iBridge
 {
@@ -10,7 +11,7 @@ namespace iBridge
         public static string GUserName = "";
     }
 
-    public static class Helper
+    public class Helper
     {
         public static string GetConnectionString()
         {
@@ -65,6 +66,12 @@ namespace iBridge
             }
 
             return result;
+        }
+
+        public DataSet GetData()
+        {
+            DataSet ds = new DataSet();
+            return ds;
         }
     }
 }
