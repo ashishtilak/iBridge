@@ -72,5 +72,15 @@ namespace iBridge
             FrmWeight f = new FrmWeight {MdiParent = this};
             f.Show();
         }
+
+        private void mnuBackup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void mnuRestore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

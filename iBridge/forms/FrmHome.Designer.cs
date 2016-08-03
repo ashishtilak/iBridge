@@ -98,6 +98,7 @@
             this.mnuBackup.Id = 3;
             this.mnuBackup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("mnuBackup.LargeGlyph")));
             this.mnuBackup.Name = "mnuBackup";
+            this.mnuBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuBackup_ItemClick);
             // 
             // mnuRestore
             // 
@@ -106,6 +107,7 @@
             this.mnuRestore.Id = 4;
             this.mnuRestore.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("mnuRestore.LargeGlyph")));
             this.mnuRestore.Name = "mnuRestore";
+            this.mnuRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnuRestore_ItemClick);
             // 
             // mnuSysParam
             // 
