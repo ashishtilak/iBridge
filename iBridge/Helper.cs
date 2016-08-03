@@ -73,5 +73,30 @@ namespace iBridge
             DataSet ds = new DataSet();
             return ds;
         }
+
+        /// <summary>
+        /// Anand Acharya 02/08/2016
+        /// used for prevent multiple form open in mdi environment
+        /// </summary>
+        /// <param name="formType">Type formType</param>
+        /// <returns>boolen if already opened returns true else false</returns>
+        public static bool IsFrmAlreadyOpen(Type formType)
+        {
+            bool isOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+
+                if (f.GetType() == formType)
+                {
+
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    isOpen = true;
+                }
+
+            }
+            return isOpen;
+        }
+
     }
 }
