@@ -59,14 +59,13 @@
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.txtTruckType = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtVehicle = new System.Windows.Forms.ComboBox();
             this.txtChallanWt = new DevExpress.XtraEditors.TextEdit();
             this.txtChallanNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTransporter = new DevExpress.XtraEditors.LookUpEdit();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnCapture = new DevExpress.XtraEditors.SimpleButton();
@@ -78,13 +77,9 @@
             this.colNetWt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtProduct = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAccount = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtVehicleNo = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTicketNo = new DevExpress.XtraEditors.LookUpEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnContainer = new DevExpress.XtraEditors.CheckButton();
             this.btnScale2 = new DevExpress.XtraEditors.CheckButton();
@@ -97,7 +92,11 @@
             this.pnlWeight = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblWeight = new DevExpress.XtraEditors.LabelControl();
-            this.txtVehicle = new System.Windows.Forms.ComboBox();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAccount = new System.Windows.Forms.ComboBox();
+            this.txtProduct = new System.Windows.Forms.ComboBox();
+            this.txtTransporter = new System.Windows.Forms.ComboBox();
+            this.txtVehicleType = new System.Windows.Forms.ComboBox();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -119,24 +118,19 @@
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTruckType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChallanWt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChallanNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTransporter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProduct.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAccount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVehicleNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTicketNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlWeight)).BeginInit();
             this.pnlWeight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -414,35 +408,27 @@
             // 
             // panelControl5
             // 
-            this.panelControl5.Controls.Add(this.txtVehicle);
-            this.panelControl5.Controls.Add(this.txtTruckType);
+            this.panelControl5.Controls.Add(this.txtVehicleType);
+            this.panelControl5.Controls.Add(this.txtTransporter);
             this.panelControl5.Controls.Add(this.txtChallanWt);
             this.panelControl5.Controls.Add(this.txtChallanNo);
             this.panelControl5.Controls.Add(this.labelControl5);
             this.panelControl5.Controls.Add(this.labelControl6);
             this.panelControl5.Controls.Add(this.labelControl7);
             this.panelControl5.Controls.Add(this.labelControl8);
-            this.panelControl5.Controls.Add(this.txtTransporter);
             this.panelControl5.Location = new System.Drawing.Point(406, 126);
             this.panelControl5.Name = "panelControl5";
             this.panelControl5.Size = new System.Drawing.Size(388, 144);
             this.panelControl5.TabIndex = 9;
             // 
-            // txtTruckType
+            // txtVehicle
             // 
-            this.txtTruckType.EditValue = "";
-            this.txtTruckType.Location = new System.Drawing.Point(89, 88);
-            this.txtTruckType.Name = "txtTruckType";
-            this.txtTruckType.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.txtTruckType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTruckType.Properties.Appearance.Options.UseFont = true;
-            this.txtTruckType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtTruckType.Properties.ImmediatePopup = true;
-            this.txtTruckType.Properties.MaxLength = 4;
-            this.txtTruckType.Properties.NullText = "";
-            this.txtTruckType.Size = new System.Drawing.Size(170, 20);
-            this.txtTruckType.TabIndex = 59;
+            this.txtVehicle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtVehicle.FormattingEnabled = true;
+            this.txtVehicle.Location = new System.Drawing.Point(89, 34);
+            this.txtVehicle.Name = "txtVehicle";
+            this.txtVehicle.Size = new System.Drawing.Size(170, 22);
+            this.txtVehicle.TabIndex = 60;
             // 
             // txtChallanWt
             // 
@@ -463,9 +449,9 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Location = new System.Drawing.Point(14, 91);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(63, 14);
+            this.labelControl5.Size = new System.Drawing.Size(54, 14);
             this.labelControl5.TabIndex = 56;
-            this.labelControl5.Text = "Truck Type";
+            this.labelControl5.Text = "Veh Type";
             // 
             // labelControl6
             // 
@@ -493,22 +479,6 @@
             this.labelControl8.Size = new System.Drawing.Size(64, 14);
             this.labelControl8.TabIndex = 50;
             this.labelControl8.Text = "Transporter";
-            // 
-            // txtTransporter
-            // 
-            this.txtTransporter.EditValue = "";
-            this.txtTransporter.Location = new System.Drawing.Point(89, 10);
-            this.txtTransporter.Name = "txtTransporter";
-            this.txtTransporter.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.txtTransporter.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTransporter.Properties.Appearance.Options.UseFont = true;
-            this.txtTransporter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtTransporter.Properties.ImmediatePopup = true;
-            this.txtTransporter.Properties.MaxLength = 4;
-            this.txtTransporter.Properties.NullText = "";
-            this.txtTransporter.Size = new System.Drawing.Size(269, 20);
-            this.txtTransporter.TabIndex = 49;
             // 
             // panelControl4
             // 
@@ -601,14 +571,14 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Controls.Add(this.labelControl4);
             this.panelControl3.Controls.Add(this.txtProduct);
-            this.panelControl3.Controls.Add(this.labelControl3);
             this.panelControl3.Controls.Add(this.txtAccount);
+            this.panelControl3.Controls.Add(this.textEdit1);
+            this.panelControl3.Controls.Add(this.txtVehicle);
+            this.panelControl3.Controls.Add(this.labelControl4);
+            this.panelControl3.Controls.Add(this.labelControl3);
             this.panelControl3.Controls.Add(this.labelControl2);
-            this.panelControl3.Controls.Add(this.txtVehicleNo);
             this.panelControl3.Controls.Add(this.labelControl13);
-            this.panelControl3.Controls.Add(this.txtTicketNo);
             this.panelControl3.Location = new System.Drawing.Point(406, 5);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(388, 115);
@@ -623,21 +593,6 @@
             this.labelControl4.TabIndex = 56;
             this.labelControl4.Text = "Product";
             // 
-            // txtProduct
-            // 
-            this.txtProduct.Location = new System.Drawing.Point(89, 88);
-            this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.txtProduct.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduct.Properties.Appearance.Options.UseFont = true;
-            this.txtProduct.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtProduct.Properties.ImmediatePopup = true;
-            this.txtProduct.Properties.MaxLength = 4;
-            this.txtProduct.Properties.NullText = "";
-            this.txtProduct.Size = new System.Drawing.Size(269, 20);
-            this.txtProduct.TabIndex = 55;
-            // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -646,21 +601,6 @@
             this.labelControl3.Size = new System.Drawing.Size(46, 14);
             this.labelControl3.TabIndex = 54;
             this.labelControl3.Text = "Account";
-            // 
-            // txtAccount
-            // 
-            this.txtAccount.Location = new System.Drawing.Point(89, 62);
-            this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.txtAccount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccount.Properties.Appearance.Options.UseFont = true;
-            this.txtAccount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtAccount.Properties.ImmediatePopup = true;
-            this.txtAccount.Properties.MaxLength = 4;
-            this.txtAccount.Properties.NullText = "";
-            this.txtAccount.Size = new System.Drawing.Size(269, 20);
-            this.txtAccount.TabIndex = 53;
             // 
             // labelControl2
             // 
@@ -671,21 +611,6 @@
             this.labelControl2.TabIndex = 52;
             this.labelControl2.Text = "Vehicle No";
             // 
-            // txtVehicleNo
-            // 
-            this.txtVehicleNo.Location = new System.Drawing.Point(89, 36);
-            this.txtVehicleNo.Name = "txtVehicleNo";
-            this.txtVehicleNo.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.txtVehicleNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVehicleNo.Properties.Appearance.Options.UseFont = true;
-            this.txtVehicleNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtVehicleNo.Properties.ImmediatePopup = true;
-            this.txtVehicleNo.Properties.MaxLength = 4;
-            this.txtVehicleNo.Properties.NullText = "";
-            this.txtVehicleNo.Size = new System.Drawing.Size(170, 20);
-            this.txtVehicleNo.TabIndex = 51;
-            // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -694,22 +619,6 @@
             this.labelControl13.Size = new System.Drawing.Size(53, 14);
             this.labelControl13.TabIndex = 50;
             this.labelControl13.Text = "Ticket No";
-            // 
-            // txtTicketNo
-            // 
-            this.txtTicketNo.EditValue = "";
-            this.txtTicketNo.Location = new System.Drawing.Point(89, 10);
-            this.txtTicketNo.Name = "txtTicketNo";
-            this.txtTicketNo.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.txtTicketNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTicketNo.Properties.Appearance.Options.UseFont = true;
-            this.txtTicketNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtTicketNo.Properties.ImmediatePopup = true;
-            this.txtTicketNo.Properties.MaxLength = 4;
-            this.txtTicketNo.Properties.NullText = "";
-            this.txtTicketNo.Size = new System.Drawing.Size(170, 20);
-            this.txtTicketNo.TabIndex = 49;
             // 
             // panelControl2
             // 
@@ -878,14 +787,48 @@
             this.lblWeight.TabIndex = 0;
             this.lblWeight.Text = "999999";
             // 
-            // txtVehicle
+            // textEdit1
             // 
-            this.txtVehicle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtVehicle.FormattingEnabled = true;
-            this.txtVehicle.Location = new System.Drawing.Point(89, 115);
-            this.txtVehicle.Name = "txtVehicle";
-            this.txtVehicle.Size = new System.Drawing.Size(170, 22);
-            this.txtVehicle.TabIndex = 60;
+            this.textEdit1.Location = new System.Drawing.Point(89, 10);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(170, 20);
+            this.textEdit1.TabIndex = 61;
+            // 
+            // txtAccount
+            // 
+            this.txtAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtAccount.FormattingEnabled = true;
+            this.txtAccount.Location = new System.Drawing.Point(89, 62);
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.Size = new System.Drawing.Size(269, 22);
+            this.txtAccount.TabIndex = 61;
+            // 
+            // txtProduct
+            // 
+            this.txtProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtProduct.FormattingEnabled = true;
+            this.txtProduct.Location = new System.Drawing.Point(89, 88);
+            this.txtProduct.Name = "txtProduct";
+            this.txtProduct.Size = new System.Drawing.Size(269, 22);
+            this.txtProduct.TabIndex = 62;
+            // 
+            // txtTransporter
+            // 
+            this.txtTransporter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtTransporter.FormattingEnabled = true;
+            this.txtTransporter.Location = new System.Drawing.Point(89, 10);
+            this.txtTransporter.Name = "txtTransporter";
+            this.txtTransporter.Size = new System.Drawing.Size(269, 22);
+            this.txtTransporter.TabIndex = 63;
+            // 
+            // txtVehicleType
+            // 
+            this.txtVehicleType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtVehicleType.FormattingEnabled = true;
+            this.txtVehicleType.Location = new System.Drawing.Point(89, 88);
+            this.txtVehicleType.Name = "txtVehicleType";
+            this.txtVehicleType.Size = new System.Drawing.Size(170, 22);
+            this.txtVehicleType.TabIndex = 64;
             // 
             // FrmWeight
             // 
@@ -923,10 +866,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTruckType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChallanWt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChallanNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTransporter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).EndInit();
@@ -934,15 +875,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProduct.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAccount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVehicleNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTicketNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlWeight)).EndInit();
             this.pnlWeight.ResumeLayout(false);
             this.pnlWeight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -972,20 +910,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNetWt;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LookUpEdit txtProduct;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LookUpEdit txtAccount;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LookUpEdit txtVehicleNo;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.LookUpEdit txtTicketNo;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LookUpEdit txtTransporter;
-        private DevExpress.XtraEditors.LookUpEdit txtTruckType;
         private DevExpress.XtraEditors.TextEdit txtChallanWt;
         private DevExpress.XtraEditors.TextEdit txtChallanNo;
         private DevExpress.XtraEditors.PanelControl panelControl6;
@@ -1018,6 +950,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.ComboBox txtVehicle;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.ComboBox txtAccount;
+        private System.Windows.Forms.ComboBox txtProduct;
+        private System.Windows.Forms.ComboBox txtTransporter;
+        private System.Windows.Forms.ComboBox txtVehicleType;
 
 
     }
