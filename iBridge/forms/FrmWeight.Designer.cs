@@ -58,14 +58,6 @@
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.txtVehicle = new System.Windows.Forms.ComboBox();
-            this.txtChallanWt = new DevExpress.XtraEditors.TextEdit();
-            this.txtChallanNo = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnCapture = new DevExpress.XtraEditors.SimpleButton();
@@ -76,6 +68,10 @@
             this.colTareWt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNetWt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.txtProduct = new System.Windows.Forms.ComboBox();
+            this.txtAccount = new System.Windows.Forms.ComboBox();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtVehicle = new System.Windows.Forms.ComboBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -90,13 +86,16 @@
             this.btnEmpty = new DevExpress.XtraEditors.CheckButton();
             this.btnLoaded = new DevExpress.XtraEditors.CheckButton();
             this.pnlWeight = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.txtAccount = new System.Windows.Forms.ComboBox();
-            this.txtProduct = new System.Windows.Forms.ComboBox();
-            this.txtTransporter = new System.Windows.Forms.ComboBox();
-            this.txtVehicleType = new System.Windows.Forms.ComboBox();
             this.txtWeight = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtVehicleType = new System.Windows.Forms.ComboBox();
+            this.txtTransporter = new System.Windows.Forms.ComboBox();
+            this.txtChallanWt = new DevExpress.XtraEditors.TextEdit();
+            this.txtChallanNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -116,22 +115,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
-            this.panelControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChallanWt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChallanNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlWeight)).BeginInit();
             this.pnlWeight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChallanWt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChallanNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -149,7 +146,6 @@
             this.panelControl1.Controls.Add(this.panelControl8);
             this.panelControl1.Controls.Add(this.panelControl7);
             this.panelControl1.Controls.Add(this.panelControl6);
-            this.panelControl1.Controls.Add(this.panelControl5);
             this.panelControl1.Controls.Add(this.panelControl4);
             this.panelControl1.Controls.Add(this.panelControl3);
             this.panelControl1.Controls.Add(this.panelControl2);
@@ -273,7 +269,7 @@
             this.textEdit10.Location = new System.Drawing.Point(89, 141);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Size = new System.Drawing.Size(170, 20);
-            this.textEdit10.TabIndex = 9;
+            this.textEdit10.TabIndex = 5;
             // 
             // labelControl18
             // 
@@ -289,7 +285,7 @@
             this.textEdit9.Location = new System.Drawing.Point(89, 115);
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Size = new System.Drawing.Size(170, 20);
-            this.textEdit9.TabIndex = 7;
+            this.textEdit9.TabIndex = 4;
             // 
             // labelControl14
             // 
@@ -305,21 +301,21 @@
             this.textEdit8.Location = new System.Drawing.Point(89, 89);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Size = new System.Drawing.Size(170, 20);
-            this.textEdit8.TabIndex = 5;
+            this.textEdit8.TabIndex = 3;
             // 
             // textEdit7
             // 
             this.textEdit7.Location = new System.Drawing.Point(89, 11);
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Size = new System.Drawing.Size(170, 20);
-            this.textEdit7.TabIndex = 60;
+            this.textEdit7.TabIndex = 0;
             // 
             // textEdit3
             // 
             this.textEdit3.Location = new System.Drawing.Point(89, 63);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(170, 20);
-            this.textEdit3.TabIndex = 3;
+            this.textEdit3.TabIndex = 2;
             // 
             // textEdit4
             // 
@@ -395,6 +391,7 @@
             this.btnPrint.Size = new System.Drawing.Size(107, 37);
             this.btnPrint.TabIndex = 1;
             this.btnPrint.Text = "&Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnSave
             // 
@@ -406,80 +403,7 @@
             this.btnSave.Size = new System.Drawing.Size(107, 37);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "&Save";
-            // 
-            // panelControl5
-            // 
-            this.panelControl5.Controls.Add(this.txtVehicleType);
-            this.panelControl5.Controls.Add(this.txtTransporter);
-            this.panelControl5.Controls.Add(this.txtChallanWt);
-            this.panelControl5.Controls.Add(this.txtChallanNo);
-            this.panelControl5.Controls.Add(this.labelControl5);
-            this.panelControl5.Controls.Add(this.labelControl6);
-            this.panelControl5.Controls.Add(this.labelControl7);
-            this.panelControl5.Controls.Add(this.labelControl8);
-            this.panelControl5.Location = new System.Drawing.Point(406, 126);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(388, 144);
-            this.panelControl5.TabIndex = 9;
-            // 
-            // txtVehicle
-            // 
-            this.txtVehicle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtVehicle.FormattingEnabled = true;
-            this.txtVehicle.Location = new System.Drawing.Point(89, 34);
-            this.txtVehicle.Name = "txtVehicle";
-            this.txtVehicle.Size = new System.Drawing.Size(170, 22);
-            this.txtVehicle.TabIndex = 3;
-            // 
-            // txtChallanWt
-            // 
-            this.txtChallanWt.Location = new System.Drawing.Point(89, 63);
-            this.txtChallanWt.Name = "txtChallanWt";
-            this.txtChallanWt.Size = new System.Drawing.Size(170, 20);
-            this.txtChallanWt.TabIndex = 5;
-            // 
-            // txtChallanNo
-            // 
-            this.txtChallanNo.Location = new System.Drawing.Point(89, 37);
-            this.txtChallanNo.Name = "txtChallanNo";
-            this.txtChallanNo.Size = new System.Drawing.Size(170, 20);
-            this.txtChallanNo.TabIndex = 3;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(14, 91);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(54, 14);
-            this.labelControl5.TabIndex = 6;
-            this.labelControl5.Text = "Veh Type";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(14, 65);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(58, 14);
-            this.labelControl6.TabIndex = 4;
-            this.labelControl6.Text = "Challan Wt";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(14, 39);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(56, 14);
-            this.labelControl7.TabIndex = 2;
-            this.labelControl7.Text = "Challan No";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(14, 13);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(64, 14);
-            this.labelControl8.TabIndex = 0;
-            this.labelControl8.Text = "Transporter";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panelControl4
             // 
@@ -572,6 +496,14 @@
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.txtVehicleType);
+            this.panelControl3.Controls.Add(this.txtTransporter);
+            this.panelControl3.Controls.Add(this.txtChallanWt);
+            this.panelControl3.Controls.Add(this.txtChallanNo);
+            this.panelControl3.Controls.Add(this.labelControl5);
+            this.panelControl3.Controls.Add(this.labelControl6);
+            this.panelControl3.Controls.Add(this.labelControl7);
+            this.panelControl3.Controls.Add(this.labelControl8);
             this.panelControl3.Controls.Add(this.txtProduct);
             this.panelControl3.Controls.Add(this.txtAccount);
             this.panelControl3.Controls.Add(this.textEdit1);
@@ -582,8 +514,42 @@
             this.panelControl3.Controls.Add(this.labelControl13);
             this.panelControl3.Location = new System.Drawing.Point(406, 5);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(388, 115);
+            this.panelControl3.Size = new System.Drawing.Size(388, 265);
             this.panelControl3.TabIndex = 0;
+            // 
+            // txtProduct
+            // 
+            this.txtProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtProduct.FormattingEnabled = true;
+            this.txtProduct.Location = new System.Drawing.Point(89, 88);
+            this.txtProduct.Name = "txtProduct";
+            this.txtProduct.Size = new System.Drawing.Size(269, 22);
+            this.txtProduct.TabIndex = 3;
+            // 
+            // txtAccount
+            // 
+            this.txtAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtAccount.FormattingEnabled = true;
+            this.txtAccount.Location = new System.Drawing.Point(89, 62);
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.Size = new System.Drawing.Size(269, 22);
+            this.txtAccount.TabIndex = 2;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(89, 10);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(170, 20);
+            this.textEdit1.TabIndex = 0;
+            // 
+            // txtVehicle
+            // 
+            this.txtVehicle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtVehicle.FormattingEnabled = true;
+            this.txtVehicle.Location = new System.Drawing.Point(89, 34);
+            this.txtVehicle.Name = "txtVehicle";
+            this.txtVehicle.Size = new System.Drawing.Size(170, 22);
+            this.txtVehicle.TabIndex = 1;
             // 
             // labelControl4
             // 
@@ -646,7 +612,7 @@
             this.btnContainer.Location = new System.Drawing.Point(149, 65);
             this.btnContainer.Name = "btnContainer";
             this.btnContainer.Size = new System.Drawing.Size(87, 33);
-            this.btnContainer.TabIndex = 27;
+            this.btnContainer.TabIndex = 3;
             this.btnContainer.TabStop = false;
             this.btnContainer.Text = "Container";
             this.btnContainer.CheckedChanged += new System.EventHandler(this.btnContainer_CheckedChanged);
@@ -660,7 +626,7 @@
             this.btnScale2.Location = new System.Drawing.Point(316, 34);
             this.btnScale2.Name = "btnScale2";
             this.btnScale2.Size = new System.Drawing.Size(69, 29);
-            this.btnScale2.TabIndex = 26;
+            this.btnScale2.TabIndex = 7;
             this.btnScale2.TabStop = false;
             this.btnScale2.Text = "Scale2";
             // 
@@ -673,7 +639,7 @@
             this.btnScale1.Location = new System.Drawing.Point(317, 5);
             this.btnScale1.Name = "btnScale1";
             this.btnScale1.Size = new System.Drawing.Size(68, 29);
-            this.btnScale1.TabIndex = 25;
+            this.btnScale1.TabIndex = 6;
             this.btnScale1.TabStop = false;
             this.btnScale1.Text = "Scale1";
             // 
@@ -686,7 +652,7 @@
             this.btnMultiple.Location = new System.Drawing.Point(101, 65);
             this.btnMultiple.Name = "btnMultiple";
             this.btnMultiple.Size = new System.Drawing.Size(44, 33);
-            this.btnMultiple.TabIndex = 24;
+            this.btnMultiple.TabIndex = 2;
             this.btnMultiple.TabStop = false;
             this.btnMultiple.Text = "M";
             this.btnMultiple.ToolTip = "Multiple";
@@ -701,7 +667,7 @@
             this.btnDouble.Location = new System.Drawing.Point(53, 65);
             this.btnDouble.Name = "btnDouble";
             this.btnDouble.Size = new System.Drawing.Size(44, 33);
-            this.btnDouble.TabIndex = 23;
+            this.btnDouble.TabIndex = 1;
             this.btnDouble.TabStop = false;
             this.btnDouble.Text = "!!";
             this.btnDouble.ToolTip = "Double";
@@ -716,7 +682,7 @@
             this.btnSingle.Location = new System.Drawing.Point(5, 65);
             this.btnSingle.Name = "btnSingle";
             this.btnSingle.Size = new System.Drawing.Size(44, 33);
-            this.btnSingle.TabIndex = 22;
+            this.btnSingle.TabIndex = 0;
             this.btnSingle.TabStop = false;
             this.btnSingle.Text = "!";
             this.btnSingle.ToolTip = "Single";
@@ -731,7 +697,7 @@
             this.btnEmpty.Location = new System.Drawing.Point(316, 65);
             this.btnEmpty.Name = "btnEmpty";
             this.btnEmpty.Size = new System.Drawing.Size(69, 33);
-            this.btnEmpty.TabIndex = 21;
+            this.btnEmpty.TabIndex = 5;
             this.btnEmpty.TabStop = false;
             this.btnEmpty.Text = "Empty";
             this.btnEmpty.ToolTip = "Tare Weight";
@@ -746,7 +712,7 @@
             this.btnLoaded.Location = new System.Drawing.Point(240, 65);
             this.btnLoaded.Name = "btnLoaded";
             this.btnLoaded.Size = new System.Drawing.Size(71, 33);
-            this.btnLoaded.TabIndex = 20;
+            this.btnLoaded.TabIndex = 4;
             this.btnLoaded.TabStop = false;
             this.btnLoaded.Text = "Loaded";
             this.btnLoaded.ToolTip = "Gross Weight";
@@ -767,59 +733,6 @@
             this.pnlWeight.Size = new System.Drawing.Size(306, 58);
             this.pnlWeight.TabIndex = 19;
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Digital-7 Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Lime;
-            this.labelControl1.Location = new System.Drawing.Point(277, 26);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(20, 22);
-            this.labelControl1.TabIndex = 60;
-            this.labelControl1.Text = "kg";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(89, 10);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(170, 20);
-            this.textEdit1.TabIndex = 1;
-            // 
-            // txtAccount
-            // 
-            this.txtAccount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtAccount.FormattingEnabled = true;
-            this.txtAccount.Location = new System.Drawing.Point(89, 62);
-            this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(269, 22);
-            this.txtAccount.TabIndex = 5;
-            // 
-            // txtProduct
-            // 
-            this.txtProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtProduct.FormattingEnabled = true;
-            this.txtProduct.Location = new System.Drawing.Point(89, 88);
-            this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(269, 22);
-            this.txtProduct.TabIndex = 7;
-            // 
-            // txtTransporter
-            // 
-            this.txtTransporter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtTransporter.FormattingEnabled = true;
-            this.txtTransporter.Location = new System.Drawing.Point(89, 10);
-            this.txtTransporter.Name = "txtTransporter";
-            this.txtTransporter.Size = new System.Drawing.Size(269, 22);
-            this.txtTransporter.TabIndex = 1;
-            // 
-            // txtVehicleType
-            // 
-            this.txtVehicleType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtVehicleType.FormattingEnabled = true;
-            this.txtVehicleType.Location = new System.Drawing.Point(89, 88);
-            this.txtVehicleType.Name = "txtVehicleType";
-            this.txtVehicleType.Size = new System.Drawing.Size(170, 22);
-            this.txtVehicleType.TabIndex = 7;
-            // 
             // txtWeight
             // 
             this.txtWeight.EditValue = "99999";
@@ -839,6 +752,84 @@
             this.txtWeight.TabIndex = 61;
             this.txtWeight.TabStop = false;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Digital-7 Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Lime;
+            this.labelControl1.Location = new System.Drawing.Point(277, 26);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(20, 22);
+            this.labelControl1.TabIndex = 60;
+            this.labelControl1.Text = "kg";
+            // 
+            // txtVehicleType
+            // 
+            this.txtVehicleType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtVehicleType.FormattingEnabled = true;
+            this.txtVehicleType.Location = new System.Drawing.Point(89, 194);
+            this.txtVehicleType.Name = "txtVehicleType";
+            this.txtVehicleType.Size = new System.Drawing.Size(170, 22);
+            this.txtVehicleType.TabIndex = 7;
+            // 
+            // txtTransporter
+            // 
+            this.txtTransporter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtTransporter.FormattingEnabled = true;
+            this.txtTransporter.Location = new System.Drawing.Point(89, 116);
+            this.txtTransporter.Name = "txtTransporter";
+            this.txtTransporter.Size = new System.Drawing.Size(269, 22);
+            this.txtTransporter.TabIndex = 4;
+            // 
+            // txtChallanWt
+            // 
+            this.txtChallanWt.Location = new System.Drawing.Point(89, 169);
+            this.txtChallanWt.Name = "txtChallanWt";
+            this.txtChallanWt.Size = new System.Drawing.Size(170, 20);
+            this.txtChallanWt.TabIndex = 6;
+            // 
+            // txtChallanNo
+            // 
+            this.txtChallanNo.Location = new System.Drawing.Point(89, 143);
+            this.txtChallanNo.Name = "txtChallanNo";
+            this.txtChallanNo.Size = new System.Drawing.Size(170, 20);
+            this.txtChallanNo.TabIndex = 5;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Location = new System.Drawing.Point(14, 197);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(54, 14);
+            this.labelControl5.TabIndex = 14;
+            this.labelControl5.Text = "Veh Type";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Location = new System.Drawing.Point(14, 171);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(58, 14);
+            this.labelControl6.TabIndex = 13;
+            this.labelControl6.Text = "Challan Wt";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Location = new System.Drawing.Point(14, 145);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(56, 14);
+            this.labelControl7.TabIndex = 11;
+            this.labelControl7.Text = "Challan No";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Location = new System.Drawing.Point(14, 119);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(64, 14);
+            this.labelControl8.TabIndex = 8;
+            this.labelControl8.Text = "Transporter";
+            // 
             // FrmWeight
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -850,6 +841,7 @@
             this.Name = "FrmWeight";
             this.Text = "Weighment";
             this.Load += new System.EventHandler(this.FrmWeight_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmWeight_KeyDown);
             this.xtraScrollableControl1.ResumeLayout(false);
             this.xtraScrollableControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -872,11 +864,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
-            this.panelControl5.ResumeLayout(false);
-            this.panelControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChallanWt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChallanNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).EndInit();
@@ -884,13 +871,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlWeight)).EndInit();
             this.pnlWeight.ResumeLayout(false);
             this.pnlWeight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChallanWt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChallanNo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -922,13 +911,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.PanelControl panelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit txtChallanWt;
-        private DevExpress.XtraEditors.TextEdit txtChallanNo;
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.SimpleButton btnPrint;
@@ -962,9 +944,15 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private System.Windows.Forms.ComboBox txtAccount;
         private System.Windows.Forms.ComboBox txtProduct;
-        private System.Windows.Forms.ComboBox txtTransporter;
-        private System.Windows.Forms.ComboBox txtVehicleType;
         private DevExpress.XtraEditors.TextEdit txtWeight;
+        private System.Windows.Forms.ComboBox txtVehicleType;
+        private System.Windows.Forms.ComboBox txtTransporter;
+        private DevExpress.XtraEditors.TextEdit txtChallanWt;
+        private DevExpress.XtraEditors.TextEdit txtChallanNo;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
 
 
     }

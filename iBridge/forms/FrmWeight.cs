@@ -240,6 +240,8 @@ namespace iBridge
 
         private void FrmWeight_Load(object sender, EventArgs e)
         {
+            this.KeyPreview = true;
+
             // default buttons
             btnDouble.Checked = true;
             btnLoaded.Checked = true;
@@ -247,6 +249,7 @@ namespace iBridge
 
             SetControls();
         }
+
 
         private void btnSingle_CheckedChanged(object sender, EventArgs e)
         {
@@ -276,6 +279,51 @@ namespace iBridge
         private void btnEmpty_CheckedChanged(object sender, EventArgs e)
         {
             SetMode();
+        }
+
+        private void FrmWeight_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!e.Control) return;
+            switch (e.KeyCode)
+            {
+                // short cut keys for mode selection
+                case Keys.D1:
+                    btnSingle.Checked = true;
+                    break;
+                case Keys.D2:
+                    btnDouble.Checked = true;
+                    break;
+                case Keys.D3:
+                    btnMultiple.Checked = true;
+                    break;
+                case Keys.D4:
+                    btnContainer.Checked = true;
+                    break;
+                case Keys.L:
+                    btnLoaded.Checked = true;
+                    break;
+                case Keys.E:
+                    btnEmpty.Checked = true;
+                    break;
+
+                // short cut key for save button
+                case Keys.S:
+                    btnSave_Click(sender, e);
+                    break;
+                case Keys.P:
+                    btnPrint_Click(sender, e);
+                    break;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //stub
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            //stub
         }
     }
 }
