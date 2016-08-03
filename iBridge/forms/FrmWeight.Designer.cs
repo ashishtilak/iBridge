@@ -97,6 +97,7 @@
             this.pnlWeight = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblWeight = new DevExpress.XtraEditors.LabelControl();
+            this.txtVehicle = new System.Windows.Forms.ComboBox();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -413,6 +414,7 @@
             // 
             // panelControl5
             // 
+            this.panelControl5.Controls.Add(this.txtVehicle);
             this.panelControl5.Controls.Add(this.txtTruckType);
             this.panelControl5.Controls.Add(this.txtChallanWt);
             this.panelControl5.Controls.Add(this.txtChallanNo);
@@ -876,6 +878,15 @@
             this.lblWeight.TabIndex = 0;
             this.lblWeight.Text = "999999";
             // 
+            // txtVehicle
+            // 
+            this.txtVehicle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtVehicle.FormattingEnabled = true;
+            this.txtVehicle.Location = new System.Drawing.Point(89, 115);
+            this.txtVehicle.Name = "txtVehicle";
+            this.txtVehicle.Size = new System.Drawing.Size(170, 22);
+            this.txtVehicle.TabIndex = 60;
+            // 
             // FrmWeight
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1006,6 +1017,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit9;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.ComboBox txtVehicle;
 
 
     }
