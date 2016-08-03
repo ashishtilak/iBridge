@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-	<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\FrmBackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmBackupRestore.designer.cs">
+      <DependentUpon>FrmBackupRestore.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\FrmSecurityKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\FrmBackupRestore.resx">
+      <DependentUpon>FrmBackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmSecurityKey.resx">
       <DependentUpon>FrmSecurityKey.cs</DependentUpon>
     </EmbeddedResource>

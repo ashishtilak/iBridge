@@ -75,12 +75,40 @@ namespace iBridge
 
         private void mnuBackup_ItemClick(object sender, ItemClickEventArgs e)
         {
+            //added on 02/08/2016 - anand
+            FrmBackupRestore f = new FrmBackupRestore { MdiParent = this };
 
+            bool t = iBridge.Helper.IsFrmAlreadyOpen(f.GetType());
+            if (!t)
+            {
+                f.OperationType = FrmBackupRestore.OpType.Backup;
+
+                f.Show();
+            }
+            else
+            {
+                f.Dispose();
+                return;
+            }
         }
 
         private void mnuRestore_ItemClick(object sender, ItemClickEventArgs e)
         {
+            //added on 02/08/2016 - anand
+            FrmBackupRestore f = new FrmBackupRestore { MdiParent = this };
 
+            bool t = iBridge.Helper.IsFrmAlreadyOpen(f.GetType());
+            if (!t)
+            {
+                f.OperationType = FrmBackupRestore.OpType.Restore;
+
+                f.Show();
+            }
+            else
+            {
+                f.Dispose();
+                return;
+            }
         }
     }
 }
