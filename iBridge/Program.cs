@@ -15,7 +15,7 @@ namespace iBridge
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //get hash code of mac id from iSuraksha dll
-            string macHashId = iSuraksha.FingerPrint.GetMacHash();
+            string cpuHash = iSuraksha.FingerPrint.GetCpuHash();
 
             //this is how dll is written containing key in dll file iKey:
             //CompilerParameters parameters = new CompilerParameters();
@@ -30,14 +30,12 @@ namespace iBridge
             {
                 // this will load dll from file
                 Assembly ass = Assembly.LoadFrom("iKey.dll");
-
                 // access the class property within the dll
                 string strKey = ass.GetType("iKeyGen").GetField("key").GetValue(null).ToString();
-
                 //got the key from dll, now decrypt it
                 string decryptedKey = iKoot.KootRoop.Decrypt(strKey);
 
-                if (macHashId == decryptedKey)
+                if (cpuHash == decryptedKey)
                 {
                     //
                     // EVERYTHING IS OK.
@@ -58,7 +56,7 @@ namespace iBridge
                     // KEY EXIST IN DLL, BUT IT DOES NOT MATCH WITH HASH CODE
 
                     MessageBox.Show("Registration dll is invalid. Contact support team");
-                    FrmSecurityKey fSecurityKey = new FrmSecurityKey(macHashId);
+                    FrmSecurityKey fSecurityKey = new FrmSecurityKey(cpuHash);
                     Application.Run(fSecurityKey);
 
                     if (fSecurityKey.Result == false)
@@ -70,7 +68,7 @@ namespace iBridge
             catch (System.IO.FileNotFoundException exFileNotFound)
             {
                 MessageBox.Show("Registration dll missing.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                FrmSecurityKey fSecurityKey = new FrmSecurityKey(macHashId);
+                FrmSecurityKey fSecurityKey = new FrmSecurityKey(cpuHash);
                 Application.Run(fSecurityKey);
                 if (fSecurityKey.Result == false)
                 {
@@ -80,13 +78,12 @@ namespace iBridge
             catch (Exception ex)
             {
                 MessageBox.Show("Problem getting data from Registration dll." + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                FrmSecurityKey fSecurityKey = new FrmSecurityKey(macHashId);
+                FrmSecurityKey fSecurityKey = new FrmSecurityKey(cpuHash);
                 Application.Run(fSecurityKey);
                 if (fSecurityKey.Result == false)
                 {
                     Application.Exit();
-                }
-            }
+                }}
         }
     }
 }
