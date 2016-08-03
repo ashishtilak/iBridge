@@ -87,40 +87,24 @@ namespace iBridge
 
         private void LoadVehicles()
         {
-            BindingSource bdsVehicles = new BindingSource();
-
             try
             {
                 using (MySqlConnection cn = new MySqlConnection(Globals.ConnectionString))
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter("select VehicleNo from vehicles order by vehicleno", cn);
+                    MySqlCommand cmd = new MySqlCommand("select VehicleNo from vehicles order by vehicleno", cn);
                     cn.Open();
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    MySqlDataReader dr = cmd.ExecuteReader();
 
-                    bdsVehicles.DataSource = ds.Tables[0];
-                    //bdsVehicles.DataMember = "Table";
-
-                    txtVehicle.DataSource = ds.Tables[0];
-                    txtVehicle.DisplayMember = "VehicleNo";
-
-                    AutoCompleteStringCollection strCol = new AutoCompleteStringCollection();
-
-                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    AutoCompleteStringCollection comboData = new AutoCompleteStringCollection();
+                    while (dr.Read())
                     {
-                        strCol.Add(dr["VehicleNo"].ToString());
+                        comboData.Add(dr["VehicleNo"].ToString());
                     }
 
-                    txtVehicle.AutoCompleteCustomSource = strCol;
-
                     txtVehicle.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    
-                    //txtVehicleNo.DataBindings.Add("EditValue", bdsVehicles, "VehicleID");
-                    //txtVehicleNo.Properties.DataSource = bdsVehicles;
-                    //txtVehicleNo.Properties.DisplayMember = "VehicleNo";
-                    //txtVehicleNo.Properties.ValueMember = "VehicleID";
-                    //txtVehicleNo.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-                    //txtVehicleNo.Properties.AutoSearchColumnIndex = 2;
+                    txtVehicle.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    txtVehicle.AutoCompleteCustomSource = comboData;txtVehicle.DataSource = comboData;
+                    txtVehicle.SelectedIndex = -1;
                 }
             }
             catch (Exception ex)
@@ -129,13 +113,140 @@ namespace iBridge
             }
         }
 
+        private void LoadAccounts()
+        {
+            try
+            {
+                using (MySqlConnection cn = new MySqlConnection(Globals.ConnectionString))
+                {
+                    MySqlCommand cmd = new MySqlCommand("select account from accounts order by account", cn);
+                    cn.Open();
+                    MySqlDataReader dr = cmd.ExecuteReader();
+
+                    AutoCompleteStringCollection comboData = new AutoCompleteStringCollection();
+                    while (dr.Read())
+                    {
+                        comboData.Add(dr["account"].ToString());}
+
+                    txtAccount.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    txtAccount.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    txtAccount.AutoCompleteCustomSource = comboData;
+                    txtAccount.DataSource = comboData;
+                    txtAccount.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadProducts()
+        {
+            try
+            {
+                using (MySqlConnection cn = new MySqlConnection(Globals.ConnectionString))
+                {
+                    MySqlCommand cmd = new MySqlCommand("select product from products order by product", cn);
+                    cn.Open();
+                    MySqlDataReader dr = cmd.ExecuteReader();
+
+                    AutoCompleteStringCollection comboData = new AutoCompleteStringCollection();
+                    while (dr.Read())
+                    {
+                        comboData.Add(dr["product"].ToString());
+                    }
+
+                    txtProduct.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    txtProduct.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    txtProduct.AutoCompleteCustomSource = comboData;
+                    txtProduct.DataSource = comboData;
+                    txtProduct.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadTransporters()
+        {
+            try
+            {
+                using (MySqlConnection cn = new MySqlConnection(Globals.ConnectionString))
+                {
+                    MySqlCommand cmd = new MySqlCommand("select transporter from transporters order by transporter", cn);
+                    cn.Open();
+                    MySqlDataReader dr = cmd.ExecuteReader();
+
+                    AutoCompleteStringCollection comboData = new AutoCompleteStringCollection();
+                    while (dr.Read())
+                    {
+                        comboData.Add(dr["transporter"].ToString());
+                    }
+
+                    txtTransporter.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    txtTransporter.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    txtTransporter.AutoCompleteCustomSource = comboData;
+                    txtTransporter.DataSource = comboData;
+                    txtTransporter.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
+        }
+
+        private void LoadVehicleTypes()
+        {
+            try
+            {
+                using (MySqlConnection cn = new MySqlConnection(Globals.ConnectionString))
+                {
+                    MySqlCommand cmd = new MySqlCommand("select vehicletype from vehicletypes order by vehicletype", cn);
+                    cn.Open();
+                    MySqlDataReader dr = cmd.ExecuteReader();
+
+                    AutoCompleteStringCollection comboData = new AutoCompleteStringCollection();
+                    while (dr.Read())
+                    {
+                        comboData.Add(dr["vehicletype"].ToString());
+                    }
+
+                    txtVehicleType.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    txtVehicleType.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    txtVehicleType.AutoCompleteCustomSource = comboData;
+                    txtVehicleType.DataSource = comboData;
+                    txtVehicleType.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }                        
+        }
+
+        private void SetControls()
+        {
+            LoadVehicles();
+            LoadAccounts();
+            LoadProducts();
+            LoadTransporters();
+            LoadVehicleTypes();
+            
+        }
+
         private void FrmWeight_Load(object sender, EventArgs e)
         {
+            // default buttons
             btnDouble.Checked = true;
             btnLoaded.Checked = true;
             btnScale1.Checked = true;
 
-            LoadVehicles();}
+            SetControls();
+        }
 
         private void btnSingle_CheckedChanged(object sender, EventArgs e)
         {
