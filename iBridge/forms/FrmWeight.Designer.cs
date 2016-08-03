@@ -91,12 +91,12 @@
             this.btnLoaded = new DevExpress.XtraEditors.CheckButton();
             this.pnlWeight = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.lblWeight = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.txtAccount = new System.Windows.Forms.ComboBox();
             this.txtProduct = new System.Windows.Forms.ComboBox();
             this.txtTransporter = new System.Windows.Forms.ComboBox();
             this.txtVehicleType = new System.Windows.Forms.ComboBox();
+            this.txtWeight = new DevExpress.XtraEditors.TextEdit();
             this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -131,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlWeight)).BeginInit();
             this.pnlWeight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraScrollableControl1
@@ -176,7 +177,7 @@
             this.gridContainer.MainView = this.gridView2;
             this.gridContainer.Name = "gridContainer";
             this.gridContainer.Size = new System.Drawing.Size(280, 75);
-            this.gridContainer.TabIndex = 60;
+            this.gridContainer.TabIndex = 5;
             this.gridContainer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -212,14 +213,14 @@
             this.textEdit6.Location = new System.Drawing.Point(101, 37);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Size = new System.Drawing.Size(170, 20);
-            this.textEdit6.TabIndex = 59;
+            this.textEdit6.TabIndex = 3;
             // 
             // textEdit5
             // 
             this.textEdit5.Location = new System.Drawing.Point(101, 11);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Size = new System.Drawing.Size(170, 20);
-            this.textEdit5.TabIndex = 58;
+            this.textEdit5.TabIndex = 1;
             // 
             // labelControl15
             // 
@@ -227,7 +228,7 @@
             this.labelControl15.Location = new System.Drawing.Point(14, 65);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(56, 14);
-            this.labelControl15.TabIndex = 54;
+            this.labelControl15.TabIndex = 4;
             this.labelControl15.Text = "Container:";
             // 
             // labelControl16
@@ -236,7 +237,7 @@
             this.labelControl16.Location = new System.Drawing.Point(14, 39);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(56, 14);
-            this.labelControl16.TabIndex = 52;
+            this.labelControl16.TabIndex = 2;
             this.labelControl16.Text = "Tare Time";
             // 
             // labelControl17
@@ -245,7 +246,7 @@
             this.labelControl17.Location = new System.Drawing.Point(14, 13);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(60, 14);
-            this.labelControl17.TabIndex = 50;
+            this.labelControl17.TabIndex = 0;
             this.labelControl17.Text = "Gross Time";
             // 
             // panelControl7
@@ -265,14 +266,14 @@
             this.panelControl7.Location = new System.Drawing.Point(406, 276);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(388, 169);
-            this.panelControl7.TabIndex = 11;
+            this.panelControl7.TabIndex = 2;
             // 
             // textEdit10
             // 
             this.textEdit10.Location = new System.Drawing.Point(89, 141);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Size = new System.Drawing.Size(170, 20);
-            this.textEdit10.TabIndex = 65;
+            this.textEdit10.TabIndex = 9;
             // 
             // labelControl18
             // 
@@ -280,7 +281,7 @@
             this.labelControl18.Location = new System.Drawing.Point(14, 143);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(31, 14);
-            this.labelControl18.TabIndex = 64;
+            this.labelControl18.TabIndex = 8;
             this.labelControl18.Text = "Field6";
             // 
             // textEdit9
@@ -288,7 +289,7 @@
             this.textEdit9.Location = new System.Drawing.Point(89, 115);
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Size = new System.Drawing.Size(170, 20);
-            this.textEdit9.TabIndex = 63;
+            this.textEdit9.TabIndex = 7;
             // 
             // labelControl14
             // 
@@ -296,7 +297,7 @@
             this.labelControl14.Location = new System.Drawing.Point(14, 117);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(31, 14);
-            this.labelControl14.TabIndex = 62;
+            this.labelControl14.TabIndex = 6;
             this.labelControl14.Text = "Field5";
             // 
             // textEdit8
@@ -304,7 +305,7 @@
             this.textEdit8.Location = new System.Drawing.Point(89, 89);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Size = new System.Drawing.Size(170, 20);
-            this.textEdit8.TabIndex = 61;
+            this.textEdit8.TabIndex = 5;
             // 
             // textEdit7
             // 
@@ -318,14 +319,14 @@
             this.textEdit3.Location = new System.Drawing.Point(89, 63);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(170, 20);
-            this.textEdit3.TabIndex = 58;
+            this.textEdit3.TabIndex = 3;
             // 
             // textEdit4
             // 
             this.textEdit4.Location = new System.Drawing.Point(89, 37);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(170, 20);
-            this.textEdit4.TabIndex = 57;
+            this.textEdit4.TabIndex = 1;
             // 
             // labelControl9
             // 
@@ -333,7 +334,7 @@
             this.labelControl9.Location = new System.Drawing.Point(14, 91);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(31, 14);
-            this.labelControl9.TabIndex = 56;
+            this.labelControl9.TabIndex = 4;
             this.labelControl9.Text = "Field4";
             // 
             // labelControl10
@@ -342,7 +343,7 @@
             this.labelControl10.Location = new System.Drawing.Point(14, 65);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(31, 14);
-            this.labelControl10.TabIndex = 54;
+            this.labelControl10.TabIndex = 2;
             this.labelControl10.Text = "Field3";
             // 
             // labelControl11
@@ -360,7 +361,7 @@
             this.labelControl12.Location = new System.Drawing.Point(14, 13);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(31, 14);
-            this.labelControl12.TabIndex = 50;
+            this.labelControl12.TabIndex = 0;
             this.labelControl12.Text = "Field1";
             // 
             // panelControl6
@@ -381,7 +382,7 @@
             this.btnClose.Location = new System.Drawing.Point(231, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(107, 37);
-            this.btnClose.TabIndex = 57;
+            this.btnClose.TabIndex = 2;
             this.btnClose.Text = "&Clear";
             // 
             // btnPrint
@@ -392,7 +393,7 @@
             this.btnPrint.Location = new System.Drawing.Point(118, 5);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(107, 37);
-            this.btnPrint.TabIndex = 56;
+            this.btnPrint.TabIndex = 1;
             this.btnPrint.Text = "&Print";
             // 
             // btnSave
@@ -403,7 +404,7 @@
             this.btnSave.Location = new System.Drawing.Point(5, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(107, 37);
-            this.btnSave.TabIndex = 55;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "&Save";
             // 
             // panelControl5
@@ -428,21 +429,21 @@
             this.txtVehicle.Location = new System.Drawing.Point(89, 34);
             this.txtVehicle.Name = "txtVehicle";
             this.txtVehicle.Size = new System.Drawing.Size(170, 22);
-            this.txtVehicle.TabIndex = 60;
+            this.txtVehicle.TabIndex = 3;
             // 
             // txtChallanWt
             // 
             this.txtChallanWt.Location = new System.Drawing.Point(89, 63);
             this.txtChallanWt.Name = "txtChallanWt";
             this.txtChallanWt.Size = new System.Drawing.Size(170, 20);
-            this.txtChallanWt.TabIndex = 58;
+            this.txtChallanWt.TabIndex = 5;
             // 
             // txtChallanNo
             // 
             this.txtChallanNo.Location = new System.Drawing.Point(89, 37);
             this.txtChallanNo.Name = "txtChallanNo";
             this.txtChallanNo.Size = new System.Drawing.Size(170, 20);
-            this.txtChallanNo.TabIndex = 57;
+            this.txtChallanNo.TabIndex = 3;
             // 
             // labelControl5
             // 
@@ -450,7 +451,7 @@
             this.labelControl5.Location = new System.Drawing.Point(14, 91);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(54, 14);
-            this.labelControl5.TabIndex = 56;
+            this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "Veh Type";
             // 
             // labelControl6
@@ -459,7 +460,7 @@
             this.labelControl6.Location = new System.Drawing.Point(14, 65);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(58, 14);
-            this.labelControl6.TabIndex = 54;
+            this.labelControl6.TabIndex = 4;
             this.labelControl6.Text = "Challan Wt";
             // 
             // labelControl7
@@ -468,7 +469,7 @@
             this.labelControl7.Location = new System.Drawing.Point(14, 39);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(56, 14);
-            this.labelControl7.TabIndex = 52;
+            this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "Challan No";
             // 
             // labelControl8
@@ -477,7 +478,7 @@
             this.labelControl8.Location = new System.Drawing.Point(14, 13);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(64, 14);
-            this.labelControl8.TabIndex = 50;
+            this.labelControl8.TabIndex = 0;
             this.labelControl8.Text = "Transporter";
             // 
             // panelControl4
@@ -508,7 +509,7 @@
             this.btnCapture.Location = new System.Drawing.Point(293, 5);
             this.btnCapture.Name = "btnCapture";
             this.btnCapture.Size = new System.Drawing.Size(88, 37);
-            this.btnCapture.TabIndex = 53;
+            this.btnCapture.TabIndex = 0;
             this.btnCapture.Text = "Capture";
             // 
             // gridMain
@@ -517,7 +518,7 @@
             this.gridMain.MainView = this.gridView1;
             this.gridMain.Name = "gridMain";
             this.gridMain.Size = new System.Drawing.Size(282, 128);
-            this.gridMain.TabIndex = 52;
+            this.gridMain.TabIndex = 1;
             this.gridMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -582,7 +583,7 @@
             this.panelControl3.Location = new System.Drawing.Point(406, 5);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(388, 115);
-            this.panelControl3.TabIndex = 7;
+            this.panelControl3.TabIndex = 0;
             // 
             // labelControl4
             // 
@@ -590,7 +591,7 @@
             this.labelControl4.Location = new System.Drawing.Point(14, 91);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(43, 14);
-            this.labelControl4.TabIndex = 56;
+            this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "Product";
             // 
             // labelControl3
@@ -599,7 +600,7 @@
             this.labelControl3.Location = new System.Drawing.Point(14, 65);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(46, 14);
-            this.labelControl3.TabIndex = 54;
+            this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Account";
             // 
             // labelControl2
@@ -608,7 +609,7 @@
             this.labelControl2.Location = new System.Drawing.Point(14, 39);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(58, 14);
-            this.labelControl2.TabIndex = 52;
+            this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Vehicle No";
             // 
             // labelControl13
@@ -617,7 +618,7 @@
             this.labelControl13.Location = new System.Drawing.Point(14, 13);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(53, 14);
-            this.labelControl13.TabIndex = 50;
+            this.labelControl13.TabIndex = 0;
             this.labelControl13.Text = "Ticket No";
             // 
             // panelControl2
@@ -759,8 +760,8 @@
             this.pnlWeight.Appearance.Options.UseBackColor = true;
             this.pnlWeight.Appearance.Options.UseBorderColor = true;
             this.pnlWeight.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlWeight.Controls.Add(this.txtWeight);
             this.pnlWeight.Controls.Add(this.labelControl1);
-            this.pnlWeight.Controls.Add(this.lblWeight);
             this.pnlWeight.Location = new System.Drawing.Point(5, 5);
             this.pnlWeight.Name = "pnlWeight";
             this.pnlWeight.Size = new System.Drawing.Size(306, 58);
@@ -776,23 +777,12 @@
             this.labelControl1.TabIndex = 60;
             this.labelControl1.Text = "kg";
             // 
-            // lblWeight
-            // 
-            this.lblWeight.Appearance.Font = new System.Drawing.Font("Digital-7 Mono", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeight.Appearance.ForeColor = System.Drawing.Color.Lime;
-            this.lblWeight.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblWeight.Location = new System.Drawing.Point(69, -2);
-            this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(174, 64);
-            this.lblWeight.TabIndex = 0;
-            this.lblWeight.Text = "999999";
-            // 
             // textEdit1
             // 
             this.textEdit1.Location = new System.Drawing.Point(89, 10);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(170, 20);
-            this.textEdit1.TabIndex = 61;
+            this.textEdit1.TabIndex = 1;
             // 
             // txtAccount
             // 
@@ -801,7 +791,7 @@
             this.txtAccount.Location = new System.Drawing.Point(89, 62);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(269, 22);
-            this.txtAccount.TabIndex = 61;
+            this.txtAccount.TabIndex = 5;
             // 
             // txtProduct
             // 
@@ -810,7 +800,7 @@
             this.txtProduct.Location = new System.Drawing.Point(89, 88);
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(269, 22);
-            this.txtProduct.TabIndex = 62;
+            this.txtProduct.TabIndex = 7;
             // 
             // txtTransporter
             // 
@@ -819,7 +809,7 @@
             this.txtTransporter.Location = new System.Drawing.Point(89, 10);
             this.txtTransporter.Name = "txtTransporter";
             this.txtTransporter.Size = new System.Drawing.Size(269, 22);
-            this.txtTransporter.TabIndex = 63;
+            this.txtTransporter.TabIndex = 1;
             // 
             // txtVehicleType
             // 
@@ -828,7 +818,26 @@
             this.txtVehicleType.Location = new System.Drawing.Point(89, 88);
             this.txtVehicleType.Name = "txtVehicleType";
             this.txtVehicleType.Size = new System.Drawing.Size(170, 22);
-            this.txtVehicleType.TabIndex = 64;
+            this.txtVehicleType.TabIndex = 7;
+            // 
+            // txtWeight
+            // 
+            this.txtWeight.EditValue = "99999";
+            this.txtWeight.Enabled = false;
+            this.txtWeight.Location = new System.Drawing.Point(33, -5);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Properties.Appearance.BackColor = System.Drawing.Color.Black;
+            this.txtWeight.Properties.Appearance.Font = new System.Drawing.Font("Digital-7 Mono", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWeight.Properties.Appearance.ForeColor = System.Drawing.Color.Lime;
+            this.txtWeight.Properties.Appearance.Options.UseBackColor = true;
+            this.txtWeight.Properties.Appearance.Options.UseFont = true;
+            this.txtWeight.Properties.Appearance.Options.UseForeColor = true;
+            this.txtWeight.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtWeight.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtWeight.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txtWeight.Size = new System.Drawing.Size(218, 68);
+            this.txtWeight.TabIndex = 61;
+            this.txtWeight.TabStop = false;
             // 
             // FrmWeight
             // 
@@ -881,6 +890,7 @@
             this.pnlWeight.ResumeLayout(false);
             this.pnlWeight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWeight.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -896,7 +906,6 @@
         private DevExpress.XtraEditors.CheckButton btnEmpty;
         private DevExpress.XtraEditors.CheckButton btnLoaded;
         private DevExpress.XtraEditors.PanelControl pnlWeight;
-        private DevExpress.XtraEditors.LabelControl lblWeight;
         private DevExpress.XtraEditors.CheckButton btnScale2;
         private DevExpress.XtraEditors.CheckButton btnScale1;
         private DevExpress.XtraEditors.PanelControl panelControl4;
@@ -955,6 +964,7 @@
         private System.Windows.Forms.ComboBox txtProduct;
         private System.Windows.Forms.ComboBox txtTransporter;
         private System.Windows.Forms.ComboBox txtVehicleType;
+        private DevExpress.XtraEditors.TextEdit txtWeight;
 
 
     }
